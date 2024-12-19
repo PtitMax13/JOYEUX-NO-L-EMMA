@@ -1,0 +1,226 @@
+/* Style général */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('images/noel.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Titre */
+h1 {
+  font-size: 2.5em;
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Paragraphe */
+p {
+  font-size: 1.2em;
+}
+
+/* Bouton */
+button {
+  background-color: #ff4d4d;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ff3333;
+}
+
+button:focus {
+  outline: 2px dashed #ffffff;
+  outline-offset: 4px;
+}
+
+/* Boîte d'énigmes */
+#riddle-box {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #f0f8ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#riddle-text {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+#feedback {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Conteneur d'étoiles */
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Style des étoiles */
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: starAnimation 2s infinite;
+}
+
+@keyframes starAnimation {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+}
+
+/* Section de récompense */
+#reward-section {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+}
+
+#reward-collection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.reward-image {
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.reward-image:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Overlay final */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Message de félicitations */
+#congrats-message {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#congrats-message h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* Animation des images */
+.animated-reward {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  animation: zoomIn 1s ease-in-out forwards;
+  transform-origin: center;
+}
+
+/* Animations clés */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+/* Adaptabilité mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  #riddle-box {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  .reward-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  #congrats-message {
+    font-size: 1.5em;
+  }
+
+  #congrats-message h1 {
+    font-size: 2.5em;
+  }
+}

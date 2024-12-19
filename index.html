@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyeux Noël Emma</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🎄 Joyeux Noël Emma 🎄</h1>
+  <p>Résous 4 énigmes pour ouvrir ton cadeau ! Appuie sur le bouton pour commencer !</p>
+
+  <button id="start">🎅 Démarrer l'énigme 🎅</button>
+
+  <div id="riddle-box">
+    <p id="riddle-text">Clique sur "Démarrer" pour découvrir ta première énigme.</p>
+    <input type="text" id="answer-input" placeholder="Entrez votre réponse ici" />
+    <button id="submit-answer">Valider la réponse</button>
+    <p id="feedback"></p>
+  </div>
+
+  <!-- Section de récompenses -->
+  <div id="reward-section">
+    <h2>Votre Collection</h2>
+    <div id="reward-collection"></div>
+  </div>
+
+  <!-- Étoiles scintillantes -->
+  <div id="star-container"></div>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
