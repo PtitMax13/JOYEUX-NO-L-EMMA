@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const rewards = [
     "images/image1.jpg",
     "images/image2.jpg",
-    "images/image3.jpeg",
-    "images/image4.jpg"
+    "images/image3.JPEG",
+    "images/image4.JPG"
   ];
 
   let currentRiddleIndex = 0;
